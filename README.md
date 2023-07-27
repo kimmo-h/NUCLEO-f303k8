@@ -12,5 +12,5 @@ Clone following Github repos:
 - Arm CMSIS 5 (https://github.com/ARM-software/CMSIS_5)
 - STM32CubeF3 CMSIS Device MCU Component (https://github.com/STMicroelectronics/cmsis_device_f3)
 
-Comment out or remove "bl __libc_init_array" at line 99 of cmsis_device_f3/Source/Templates/gcc/startup_stm32f303x8.s
-startup file.
+Comment out or remove function call "bl __libc_init_array" at line 99 of
+cmsis_device_f3/Source/Templates/gcc/startup_stm32f303x8.s startup file.
