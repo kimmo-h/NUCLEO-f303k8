@@ -5,7 +5,7 @@ OFLAGS = -Os
 GFLAGS = -g3
 WFLAGS = -Wall -Wextra -Werror -Wconversion -Wdouble-promotion -Wshadow -Wundef
 IFLAGS = -ICMSIS_5/CMSIS/Core/Include -Icmsis_device_f3/Include
-FFLAGS = -fdata-sections -ffunction-sections
+FFLAGS = -ffreestanding -fdata-sections -ffunction-sections
 MFLAGS = -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mthumb
 CFLAGS = $(OFLAGS) $(GFLAGS) $(WFLAGS) $(IFLAGS) $(FFLAGS) $(MFLAGS)
 LDFLAGS = -Tlink.ld -nostdlib -lgcc -Wl,--gc-sections
