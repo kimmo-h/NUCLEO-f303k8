@@ -8,7 +8,7 @@ IFLAGS = -ICMSIS_5/CMSIS/Core/Include -Icmsis_device_f3/Include
 FFLAGS = -fdata-sections -ffunction-sections
 MFLAGS = -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mthumb
 CFLAGS = $(OFLAGS) $(GFLAGS) $(WFLAGS) $(IFLAGS) $(FFLAGS) $(MFLAGS)
-LDFLAGS = -Tlink.ld --specs=nano.specs -Wl,--gc-sections
+LDFLAGS = -Tlink.ld -nostdlib -lgcc -Wl,--gc-sections
 ELF = $(OUTPUT).elf
 BIN = $(OUTPUT).bin
 
